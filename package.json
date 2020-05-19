@@ -1,0 +1,31 @@
+{
+  "name": "my-theme-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "keywords": [],
+  "author": "Darren Li <dxl@enablehr.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@mdx-js/mdx": "^1.5.7",
+    "@mdx-js/react": "^1.5.7",
+    "@theme-ui/prism": "^0.4.0-alpha.0",
+    "@theme-ui/sidenav": "^0.4.0-alpha.0",
+    "gatsby": "^2.19.35",
+    "gatsby-plugin-mdx": "^1.0.79",
+    "gatsby-plugin-react-helmet": "^3.1.23",
+    "gatsby-plugin-theme-ui": "^0.4.0-alpha.0",
+    "graphiql": "^0.17.5",
+    "prismjs": "^1.16.0",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "react-helmet": "^5.2.1",
+    "theme-ui": "^0.4.0-alpha.0"
+  }
+}

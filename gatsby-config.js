@@ -9,5 +9,9 @@ module.exports = {
         path: `${__dirname}/src/pages/`
       }
     }
-  ]
+  ],
+  siteMetadata: {
+    title: 'enableHR API',
+    description: 'Learn how to use the enableHR API to integrate with your software'
+  }
 };

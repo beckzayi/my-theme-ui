@@ -1,10 +1,10 @@
-import React from 'react';
-import { Helmet } from 'react-helmet';
+import React from 'react'
+import { Helmet } from 'react-helmet'
 
-import useSiteMetadata from '../hooks/use-site-metadata';
+import useSiteMetadata from '../hooks/use-site-metadata'
 
-export default props => {
-  const { description } = useSiteMetadata();
+export default (props) => {
+  const { description } = useSiteMetadata()
 
   const title = [
     props.title,
@@ -13,8 +13,8 @@ export default props => {
     'Theme UI',
   ]
     .filter(Boolean)
-    .join(' – ');
-  
+    .join(' – ')
+
   return (
     <Helmet>
       <html lang="en" />
@@ -22,5 +22,5 @@ export default props => {
       <meta name="description" content={description} />
       <link rel="shortcut icon" href="/images/favicon.ico" />
     </Helmet>
-  );
-};
+  )
+}

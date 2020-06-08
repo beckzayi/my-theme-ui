@@ -6,12 +6,13 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'pages',
-        path: `${__dirname}/src/pages/`
-      }
-    }
+        path: `${__dirname}/src/pages/`,
+      },
+    },
   ],
   siteMetadata: {
     title: 'enableHR API',
-    description: 'Learn how to use the enableHR API to integrate with your software'
-  }
-};
+    description:
+      'Learn how to use the enableHR API to integrate with your software',
+  },
+}

@@ -17,7 +17,10 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['react'],
-  rules: {},
+  rules: {
+    "react/prop-types": 0,
+    "react/no-children-prop": 0
+  },
   settings: {
     react: {
       version: 'detect',

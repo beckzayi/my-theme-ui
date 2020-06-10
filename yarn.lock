@@ -1299,7 +1299,7 @@
     "@theme-ui/css" "^0.4.0-highlight.0"
     deepmerge "^4.2.2"
 
-"@theme-ui/components@^0.4.0-highlight.0":
+"@theme-ui/components@^0.4.0-alpha.0", "@theme-ui/components@^0.4.0-highlight.0":
   version "0.4.0-highlight.0"
   resolved "https://registry.yarnpkg.com/@theme-ui/components/-/components-0.4.0-highlight.0.tgz#e4eafd517e347b3c8f380906f504103e215ca222"
   integrity sha512-dwVKGcXf29m4nehEKwaX/Vbl5fi/xhMNqHIYo1hnYmInKdUOnKDJOyxiiu4iNdmjTuXmpjj9WxBap1WHM07hkQ==

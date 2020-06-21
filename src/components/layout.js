@@ -10,46 +10,44 @@ export default (props) => {
   return (
     <Styled.root>
       <Head {...props} />
-      <Flex
-        sx={{
-          flexDirection: 'column',
-          minHeight: '100vh',
-        }}>
+      <div>
         <Flex
-          as="header"
           sx={{
-            px: 3,
+            flexWrap: 'wrap',
+            minHeight: '100vh',
           }}>
-          <SidebarLinks
-            {...props}
-            components={{
-              wrapper: AccordionNav,
-              a: NavLink,
-            }}
-          />
-        </Flex>
-        <Box
-          sx={{
-            flex: '1 1 auto',
-          }}>
-          <div
+          <aside
             sx={{
-              display: ['block', 'flex'],
+              flexGrow: 1,
+              flexBasis: 'sidebar',
+              px: 3,
+            }}>
+            <SidebarLinks
+              {...props}
+              components={{
+                wrapper: AccordionNav,
+                a: NavLink,
+              }}
+            />
+          </aside>
+          <Flex
+            sx={{
+              flexGrow: 99999,
+              flexBasis: 0,
             }}>
             <main
-              id="content"
               sx={{
+                minWidth: 320,
                 width: '100%',
-                minWidth: 0,
                 maxWidth: 768,
                 mx: 'auto',
                 px: 3,
               }}>
               {props.children}
             </main>
-          </div>
-        </Box>
-      </Flex>
+          </Flex>
+        </Flex>
+      </div>
     </Styled.root>
   )
 }

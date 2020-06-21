@@ -2,14 +2,14 @@ import prism from '@theme-ui/prism/presets/theme-ui'
 
 export default {
   colors: {
-    text: '#000000',
+    text: '#020a2c',
     background: '#ffffff',
-    primary: '#3333ee',
-    secondary: '#111199',
+    primary: '#48a383',
+    secondary: '#12af7f',
     muted: '#f6f6f6',
     highlight: '#efeffe',
-    gray: '#777777',
-    accent: '#660099',
+    gray: '#b9bccb',
+    accent: '#5864fe',
     darken: 'rgba(0, 0, 0, .25)',
   },
   fonts: {

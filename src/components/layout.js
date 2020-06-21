@@ -1,9 +1,10 @@
 /** @jsx jsx */
 import { jsx, Styled } from 'theme-ui'
 import { Flex, Box } from '@theme-ui/components'
+import { AccordionNav } from '@theme-ui/sidenav'
 import Head from './head'
-import Header from './header'
-import Footer from './footer'
+import SidebarLinks from '../links.mdx'
+import NavLink from './nav-links'
 
 export default (props) => {
   return (
@@ -17,10 +18,15 @@ export default (props) => {
         <Flex
           as="header"
           sx={{
-            height: 64,
             px: 3,
           }}>
-          <Header />
+          <SidebarLinks
+            {...props}
+            components={{
+              wrapper: AccordionNav,
+              a: NavLink,
+            }}
+          />
         </Flex>
         <Box
           sx={{
@@ -41,7 +47,6 @@ export default (props) => {
               }}>
               {props.children}
             </main>
-            <Footer />
           </div>
         </Box>
       </Flex>

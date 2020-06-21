@@ -44,7 +44,6 @@ export default (props) => {
             <Footer />
           </div>
         </Box>
-        >
       </Flex>
     </Styled.root>
   )

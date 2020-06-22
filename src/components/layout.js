@@ -2,6 +2,7 @@
 import { jsx, Styled } from 'theme-ui'
 import { Flex, Box } from '@theme-ui/components'
 import { AccordionNav } from '@theme-ui/sidenav'
+import { Link } from 'gatsby'
 import Head from './head'
 import SidebarLinks from '../links.mdx'
 import NavLink from './nav-links'
@@ -10,7 +11,38 @@ export default (props) => {
   return (
     <Styled.root>
       <Head {...props} />
-      <div>
+      <Box>
+        <header
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+            variant: 'styles.header',
+            py: 2,
+            px: 1,
+          }}>
+          <Link to='/'
+            sx={{
+              variant: 'styles.navlink',
+              p: 3,
+            }}>
+            Home
+          </Link>
+          <div sx={{ mx: 'auto' }} />
+          <Link to='/'
+            sx={{
+              variant: 'styles.navlink',
+              p: 3,
+            }}>
+            Docs
+          </Link>
+          <Link to='/'
+            sx={{
+              variant: 'styles.navlink',
+              p: 3,
+            }}>
+            Development
+          </Link>
+        </header>
         <Flex
           sx={{
             flexWrap: 'wrap',
@@ -47,7 +79,7 @@ export default (props) => {
             </main>
           </Flex>
         </Flex>
-      </div>
+      </Box>
     </Styled.root>
   )
 }

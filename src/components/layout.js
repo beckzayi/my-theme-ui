@@ -20,7 +20,8 @@ export default (props) => {
             py: 2,
             px: 1,
           }}>
-          <Link to='/'
+          <Link
+            to="/"
             sx={{
               variant: 'styles.navlink',
               p: 3,
@@ -28,14 +29,16 @@ export default (props) => {
             Home
           </Link>
           <div sx={{ mx: 'auto' }} />
-          <Link to='/'
+          <Link
+            to="/"
             sx={{
               variant: 'styles.navlink',
               p: 3,
             }}>
             Docs
           </Link>
-          <Link to='/'
+          <Link
+            to="/"
             sx={{
               variant: 'styles.navlink',
               p: 3,
@@ -88,13 +91,13 @@ export default (props) => {
             p: 2,
             variant: 'styles.footer',
           }}>
-          <Link to='/' sx={{ variant: 'styles.navlink', p: 2 }}>
+          <Link to="/" sx={{ variant: 'styles.navlink', p: 2 }}>
             Home
           </Link>
-          <Link to='/' sx={{ variant: 'styles.navlink', p: 2 }}>
+          <Link to="/" sx={{ variant: 'styles.navlink', p: 2 }}>
             Docs
           </Link>
-          <Link to='/' sx={{ variant: 'styles.navlink', p: 2 }}>
+          <Link to="/" sx={{ variant: 'styles.navlink', p: 2 }}>
             Development
           </Link>
           <div sx={{ p: 2 }}>© 2020 enableHR</div>

@@ -1,0 +1,257 @@
+# Syntax Highlighting
+
+Extend the basic syntax by adding additional elements like code blocks and syntax highlighting. For example, `product_id`.
+
+## json
+
+```json
+{
+  "subscription": {
+    "product_handle": "basic",
+    "customer_attributes": {
+      "first_name": "Alysa",
+      "last_name": "Test",
+      "email": "alysa@example.com"
+    },
+    "credit_card_attributes": {
+      "full_number": "1",
+      "expiration_month": "10",
+      "expiration_year": "2020"
+    }
+  }
+}
+```
+
+## cURL
+
+```shell
+curl --request POST \
+  --url https:///%3C%3Csubdomain%3E%3E.chargify.com/subscriptions.json \
+  --header 'authorization: Basic PDxhcGlfa2V5Pj46' \
+  --header 'content-type: application/json' \
+  --data '{"subscription":{"product_handle":"basic","customer_attributes":{"first_name":"Alysa","last_name":"Test","email":"alysa@example.com"},"credit_card_attributes":{"full_number":"1","expiration_month":"10","expiration_year":"2020"}}}'
+```
+
+## Go
+
+```go
+package main
+
+import (
+	"fmt"
+	"strings"
+	"net/http"
+	"io/ioutil"
+)
+
+func main() {
+	url := "https:///%3C%3Csubdomain%3E%3E.chargify.com/subscriptions.json"
+
+	payload := strings.NewReader("{\"subscription\":{\"product_handle\":\"basic\",\"customer_attributes\":{\"first_name\":\"Alysa\",\"last_name\":\"Test\",\"email\":\"alysa@example.com\"},\"credit_card_attributes\":{\"full_number\":\"1\",\"expiration_month\":\"10\",\"expiration_year\":\"2020\"}}}")
+
+	req, _ := http.NewRequest("POST", url, payload)
+
+	req.Header.Add("content-type", "application/json")
+	req.Header.Add("authorization", "Basic PDxhcGlfa2V5Pj46")
+
+	res, _ := http.DefaultClient.Do(req)
+
+	defer res.Body.Close()
+	body, _ := ioutil.ReadAll(res.Body)
+
+	fmt.Println(res)
+	fmt.Println(string(body))
+}
+```
+
+## Java
+
+```java
+HttpResponse<String> response = Unirest.post("https:///%3C%3Csubdomain%3E%3E.chargify.com/subscriptions.json")
+  .header("content-type", "application/json")
+  .header("authorization", "Basic PDxhcGlfa2V5Pj46")
+  .body("{\"subscription\":{\"product_handle\":\"basic\",\"customer_attributes\":{\"first_name\":\"Alysa\",\"last_name\":\"Test\",\"email\":\"alysa@example.com\"},\"credit_card_attributes\":{\"full_number\":\"1\",\"expiration_month\":\"10\",\"expiration_year\":\"2020\"}}}")
+  .asString();
+```
+
+## JavaScript
+
+```js
+var data = JSON.stringify({
+  subscription: {
+    product_handle: 'basic',
+    customer_attributes: {
+      first_name: 'Alysa',
+      last_name: 'Test',
+      email: 'alysa@example.com',
+    },
+    credit_card_attributes: {
+      full_number: '1',
+      expiration_month: '10',
+      expiration_year: '2020',
+    },
+  },
+})
+
+var xhr = new XMLHttpRequest()
+xhr.withCredentials = true
+
+xhr.addEventListener('readystatechange', function () {
+  if (this.readyState === this.DONE) {
+    console.log(this.responseText)
+  }
+})
+
+xhr.open(
+  'POST',
+  'https:///%3C%3Csubdomain%3E%3E.chargify.com/subscriptions.json'
+)
+xhr.setRequestHeader('content-type', 'application/json')
+xhr.setRequestHeader('authorization', 'Basic PDxhcGlfa2V5Pj46')
+
+xhr.send(data)
+```
+
+## Node
+
+```javascript
+var http = require('https')
+
+var options = {
+  method: 'POST',
+  hostname: '',
+  port: null,
+  path: '%3C%3Csubdomain%3E%3E.chargify.com/subscriptions.json',
+  headers: {
+    'content-type': 'application/json',
+    authorization: 'Basic PDxhcGlfa2V5Pj46',
+  },
+}
+
+var req = http.request(options, function (res) {
+  var chunks = []
+
+  res.on('data', function (chunk) {
+    chunks.push(chunk)
+  })
+
+  res.on('end', function () {
+    var body = Buffer.concat(chunks)
+    console.log(body.toString())
+  })
+})
+
+req.write(
+  JSON.stringify({
+    subscription: {
+      product_handle: 'basic',
+      customer_attributes: {
+        first_name: 'Alysa',
+        last_name: 'Test',
+        email: 'alysa@example.com',
+      },
+      credit_card_attributes: {
+        full_number: '1',
+        expiration_month: '10',
+        expiration_year: '2020',
+      },
+    },
+  })
+)
+req.end()
+```
+
+## PHP
+
+```php
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => "https:///%3C%3Csubdomain%3E%3E.chargify.com/subscriptions.json",
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => "",
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 30,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => "POST",
+  CURLOPT_POSTFIELDS => "{\"subscription\":{\"product_handle\":\"basic\",\"customer_attributes\":{\"first_name\":\"Alysa\",\"last_name\":\"Test\",\"email\":\"alysa@example.com\"},\"credit_card_attributes\":{\"full_number\":\"1\",\"expiration_month\":\"10\",\"expiration_year\":\"2020\"}}}",
+  CURLOPT_HTTPHEADER => array(
+    "authorization: Basic PDxhcGlfa2V5Pj46",
+    "content-type: application/json"
+  ),
+));
+
+$response = curl_exec($curl);
+$err = curl_error($curl);
+
+curl_close($curl);
+
+if ($err) {
+  echo "cURL Error #:" . $err;
+} else {
+  echo $response;
+}
+```
+
+## Python
+
+```python
+import http.client
+
+conn = http.client.HTTPSConnection("")
+
+payload = "{\"subscription\":{\"product_handle\":\"basic\",\"customer_attributes\":{\"first_name\":\"Alysa\",\"last_name\":\"Test\",\"email\":\"alysa@example.com\"},\"credit_card_attributes\":{\"full_number\":\"1\",\"expiration_month\":\"10\",\"expiration_year\":\"2020\"}}}"
+
+headers = {
+    'content-type': "application/json",
+    'authorization': "Basic PDxhcGlfa2V5Pj46"
+    }
+
+conn.request("POST", "%3C%3Csubdomain%3E%3E.chargify.com/subscriptions.json", payload, headers)
+```
+
+## C
+
+```c
+CURL *hnd = curl_easy_init();
+
+curl_easy_setopt(hnd, CURLOPT_CUSTOMREQUEST, "POST");
+curl_easy_setopt(hnd, CURLOPT_URL, "https:///%3C%3Csubdomain%3E%3E.chargify.com/subscriptions.json");
+
+struct curl_slist *headers = NULL;
+headers = curl_slist_append(headers, "authorization: Basic PDxhcGlfa2V5Pj46");
+headers = curl_slist_append(headers, "content-type: application/json");
+curl_easy_setopt(hnd, CURLOPT_HTTPHEADER, headers);
+
+curl_easy_setopt(hnd, CURLOPT_POSTFIELDS, "{\"subscription\":{\"product_handle\":\"basic\",\"customer_attributes\":{\"first_name\":\"Alysa\",\"last_name\":\"Test\",\"email\":\"alysa@example.com\"},\"credit_card_attributes\":{\"full_number\":\"1\",\"expiration_month\":\"10\",\"expiration_year\":\"2020\"}}}");
+
+CURLcode ret = curl_easy_perform(hnd);
+```
+
+## C
+
+```clike
+var client = new RestClient("https:///%3C%3Csubdomain%3E%3E.chargify.com/subscriptions.json");
+var request = new RestRequest(Method.POST);
+request.AddHeader("authorization", "Basic PDxhcGlfa2V5Pj46");
+request.AddHeader("content-type", "application/json");
+request.AddParameter("application/json", "{\"subscription\":{\"product_handle\":\"basic\",\"customer_attributes\":{\"first_name\":\"Alysa\",\"last_name\":\"Test\",\"email\":\"alysa@example.com\"},\"credit_card_attributes\":{\"full_number\":\"1\",\"expiration_month\":\"10\",\"expiration_year\":\"2020\"}}}", ParameterType.RequestBody);
+IRestResponse response = client.Execute(request);
+```
+
+## Ruby
+
+```ruby
+require 'redcarpet'
+markdown = Redcarpet.new("Hello World!")
+puts markdown.to_html
+```
+
+## CSS
+
+```css
+.button {
+  color: #333;
+  font-weight: bold;
+}
+```

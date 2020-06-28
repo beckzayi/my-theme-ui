@@ -1,14 +1,11 @@
 import React from 'react'
 import GraphiQLEditor from '../../utils/graphiql/editor'
-import queryString from './get-film-query'
+import queryString, { id } from './get-film-query'
 
 class GetFilm extends React.Component {
   renderContent() {
     return (
-      <GraphiQLEditor
-        query={queryString}
-        variables={`{ "id": "${id_film}" }`}
-      />
+      <GraphiQLEditor query={queryString} variables={`{ "id": "${id}" }`} />
     )
   }
 

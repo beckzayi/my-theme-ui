@@ -8,3 +8,5 @@ const query = `query ($id: ID!){
 }`
 
 export default query
+
+export const id = 'cj0nxmy3fga5s01148gf8iy3c'

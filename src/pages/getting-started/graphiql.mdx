@@ -1,10 +1,12 @@
 import { Button } from 'theme-ui'
 import GraphiQLEditor from '../../utils/graphiql/editor'
 import queryString from '../../components/films/films-query'
-import url from '../../utils/graphiql/url'
+import Link from '../../utils/graphiql/link'
 
 # GraphiQL
 
 ## Default GraphiQL
 
 <GraphiQLEditor query={''} variables={null} />
+
+<Link query={queryString} text="All Films" />

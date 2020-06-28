@@ -1,7 +1,8 @@
 import { Button } from 'theme-ui'
 import GraphiQLEditor from '../../utils/graphiql/editor'
-import queryString from '../../components/films/films-query'
 import Link from '../../utils/graphiql/link'
+import queryString from '../../components/films/films-query'
+import queryStringGetFilm from '../../components/films/get-film-query'
 
 # GraphiQL
 
@@ -9,4 +10,23 @@ import Link from '../../utils/graphiql/link'
 
 <GraphiQLEditor query={''} variables={null} />
 
-<Link query={queryString} text="All Films" />
+<br />
+
+<div>
+  <Link query={queryString} text="All Films" />
+</div>
+
+<br />
+
+Remember to add the `id` variable to the `QUERY VARIABLES` section in GraphiQL editor.
+
+<div>
+  <Link query={queryStringGetFilm} text="Get a Film" />
+
+```json
+{
+  "id": "cj0nxmy3fga5s01148gf8iy3c"
+}
+```
+
+</div>

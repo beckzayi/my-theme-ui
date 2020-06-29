@@ -9,22 +9,11 @@ import queryStringGetFilm from '../../components/films/get-film-query'
 
 # GraphiQL
 
-## Default GraphiQL
+## Try it out
 
-<GraphiQLEditor query={''} variables={null} />
-
-<br />
-
-<div>
-  <Link query={queryString} text="All Films" />
-</div>
-
-<br />
-
-Remember to add the `id` variable to the `QUERY VARIABLES` section in GraphiQL editor.
-
-<div>
-  <Link query={queryStringGetFilm} text="Get a Film" />
+- <Link query={queryString} text="All Films" button={false} />
+- <Link query={queryString} text="Read a Film" button={false} /> Remember to add
+  the `id` variable to the `QUERY VARIABLES` section in GraphiQL editor as below.
 
 ```json
 {
@@ -32,4 +21,6 @@ Remember to add the `id` variable to the `QUERY VARIABLES` section in GraphiQL e
 }
 ```
 
-</div>
+## Default GraphiQL
+
+<GraphiQLEditor query={''} variables={null} />

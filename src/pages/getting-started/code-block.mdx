@@ -28,7 +28,7 @@ Extend the basic syntax by adding additional elements like code blocks and synta
 
 ## cURL
 
-```shell
+```sh
 curl --request POST \
   --url https:///%3C%3Csubdomain%3E%3E.chargify.com/subscriptions.json \
   --header 'authorization: Basic PDxhcGlfa2V5Pj46' \
@@ -232,9 +232,9 @@ curl_easy_setopt(hnd, CURLOPT_POSTFIELDS, "{\"subscription\":{\"product_handle\"
 CURLcode ret = curl_easy_perform(hnd);
 ```
 
-## C
+## C++
 
-```clike
+```cpp
 var client = new RestClient("https:///%3C%3Csubdomain%3E%3E.chargify.com/subscriptions.json");
 var request = new RestRequest(Method.POST);
 request.AddHeader("authorization", "Basic PDxhcGlfa2V5Pj46");

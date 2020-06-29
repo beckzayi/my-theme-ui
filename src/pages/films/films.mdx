@@ -4,15 +4,61 @@ title: 'Films'
 
 import ResponseElements from '../../components/elements/films/films-response'
 import Films from '../../components/films/films'
+import Link from '../../utils/graphiql/link'
+import queryString from '../../components/films/films-query'
 
-# All Films
+# Read Films
 
-<hr />
+This method will return data of all films from a Site. Pay close attention to query string filters and pagination in order to control responses from the server.
 
-## GET Films
+Check [Read a Film](/films/get-film) if you need data of a single film.
 
-The following elements are returned in the Films response.
+## Try it out
+
+Click the button below to open a new browser to play with GraphiQL, which prefills query string. Ask for what you want, and get predictable results.
+
+<Link query={queryString} />
+
+## Request Parameters
+
+None.
+
+## Response
+
+The following elements are returned in the films response.
 
 <ResponseElements />
+
+## Code Example
+
+```graphql
+query {
+  allFilms {
+    id
+    title
+    createdAt
+    director
+  }
+}
+```
+
+```json
+{
+  "data": {
+    "allFilms": [
+      {
+        "id": "cj0nxmy3fga5s01148gf8iy3c",
+        "title": "A New Hope",
+        "createdAt": "2017-03-24T14:38:57.000Z",
+        "director": "George Lucas"
+      }
+    ]
+  }
+}
+```
+
+## GraphiQL Editor
+
+Play with data using GraphQL below. You can write your own query string in the pane.
 
 <Films />

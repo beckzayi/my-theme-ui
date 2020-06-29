@@ -312,6 +312,15 @@ export default {
         color: 'primary',
       },
     },
+    headerlink: {
+      display: 'inline-block',
+      fontWeight: 'bold',
+      color: 'background',
+      textDecoration: 'none',
+      ':hover,:focus': {
+        color: 'muted',
+      },
+    },
   },
   prism,
 }

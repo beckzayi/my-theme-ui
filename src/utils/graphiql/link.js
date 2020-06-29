@@ -2,7 +2,7 @@
 import { jsx } from 'theme-ui'
 import { Link } from 'gatsby'
 
-const endpoint_graphql = process.env.ENDPOINT_GRAPHQL
+const endpoint_graphql = process.env.GATSBY_ENDPOINT_GRAPHQL
 
 export default ({ query, text = 'Open', target = true }) => (
   <Link

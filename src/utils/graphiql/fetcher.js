@@ -1,4 +1,4 @@
-const endpoint_graphql = process.env.ENDPOINT_GRAPHQL
+const endpoint_graphql = process.env.GATSBY_ENDPOINT_GRAPHQL
 
 const graphQLFetcher = (graphQLParams) => {
   return fetch(endpoint_graphql, {

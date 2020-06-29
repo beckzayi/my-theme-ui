@@ -21,7 +21,7 @@ export default () => (
     </Link>
     <div sx={{ mx: 'auto' }} />
     <Link
-      to="/"
+      to="/getting-started"
       sx={{
         variant: 'styles.headerlink',
         p: 3,
@@ -29,7 +29,7 @@ export default () => (
       Docs
     </Link>
     <Link
-      to="/"
+      to="/films/films"
       sx={{
         variant: 'styles.headerlink',
         p: 3,

@@ -49,7 +49,9 @@ export default (props) => {
                 mx: 'auto',
                 px: 3,
               }}>
-              <div><ModeSwitch /></div>
+              <div>
+                <ModeSwitch />
+              </div>
               {props.children}
             </main>
           </Flex>

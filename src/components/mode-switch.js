@@ -10,8 +10,8 @@ const ModeSwitch = () => {
     <div>
       <Label>
         <Radio
-          name='dark-mode'
-          value='true'
+          name="dark-mode"
+          value="true"
           defaultChecked={true}
           onClick={() => dispatch({ type: TOGGLE_MODE })}
         />
@@ -19,8 +19,8 @@ const ModeSwitch = () => {
       </Label>
       <Label>
         <Radio
-          name='dark-mode'
-          value='false'
+          name="dark-mode"
+          value="false"
           onClick={() => dispatch({ type: TOGGLE_MODE })}
         />
         GraphQL

@@ -8,6 +8,7 @@ import Header from './header'
 import Footer from './footer'
 import SidebarLinks from '../links.mdx'
 import NavLink from './nav-links'
+import ModeSwitch from './mode-switch'
 
 export default (props) => {
   return (
@@ -48,6 +49,7 @@ export default (props) => {
                 mx: 'auto',
                 px: 3,
               }}>
+              <div><ModeSwitch /></div>
               {props.children}
             </main>
           </Flex>

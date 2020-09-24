@@ -1,21 +1,21 @@
 import React from 'react'
+import { TOGGLE_MODE } from '../actions/types'
+import { MODE_REST, MODE_GRAPHQL } from '../constants/modes'
 
 export const GlobalStateContext = React.createContext()
 export const GlobalDispatchContext = React.createContext()
 
 const initialState = {
-  mode: 'rest',
+  mode: MODE_REST,
 }
 
 function reducer(state, action) {
-  console.log(action.type)
   switch (action.type) {
-    case 'TOGGLE_MODE': {
+    case TOGGLE_MODE: {
       const newState = {
         ...state,
-        mode: state.mode == 'rest' ? 'graphql' : 'rest',
+        mode: state.mode == MODE_REST ? MODE_GRAPHQL : MODE_REST,
       }
-      console.log(newState)
       return newState
     }
     default:
